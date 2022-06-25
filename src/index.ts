@@ -1,0 +1,22 @@
+function init() {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const form = document.querySelector("form")!;
+  form.addEventListener("submit", submitHandler);
+}
+
+function submitHandler(e: Event) {
+  e.preventDefault();
+  const a = document.querySelector("input[name='a']") as HTMLInputElement;
+  const b = document.querySelector("input[name='b']") as HTMLInputElement;
+  const result = add(Number(a.value), Number(b.value));
+  const resultElement = document.querySelector("p");
+  if (resultElement) {
+    resultElement.textContent = result.toString();
+  }
+}
+
+export function add(a: number, b: number): number {
+  return a + b;
+}
+
+init();

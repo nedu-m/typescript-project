@@ -1,0 +1,1 @@
+document.querySelector("form").addEventListener("submit",(function(e){e.preventDefault();var t=document.querySelector("input[name='a']"),n=document.querySelector("input[name='b']"),u=function(e,t){return e+t}(Number(t.value),Number(n.value)),r=document.querySelector("p");r&&(r.textContent=u.toString())}));
